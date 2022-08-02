@@ -12,14 +12,14 @@ var args = process.argv.slice(2);
 
 const run = async () => {
   const factory = new ethers.Contract(
-    "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73",
+    "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
     [
       "function getPair(address tokenA, address tokenB) external view returns (address pair)",
     ],
     account
   );
   const pairAddress = await factory.getPair(
-    "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", // wbnb
+    "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270", // wbnb
     args[0]
   );
   console.log("pairAddress: " + pairAddress);
