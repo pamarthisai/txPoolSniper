@@ -9,7 +9,7 @@ const provider = new ethers.providers.WebSocketProvider(
 );
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY);
 const account = wallet.connect(provider);
-const pcs = "0x10ED43C718714eb63d5aA57B78B54704E256024E";
+const pcs = "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506";
 
 const run = async () => {
   const sellContract = new ethers.Contract(
